@@ -1,0 +1,13 @@
+
+
+  <%= link_to 'Add New Restaurant', new_restaurant_path, class:"text-decoration-none" %>
+
+
+<div class="container w-50">
+  <ol class="list-group">
+    <% @restaurants.each do |restaurant| %>
+      <li><%= link_to restaurant.name, restaurant_path(restaurant), class:"text-decoration-none bold" %></li>
+      <%= restaurant.category %>
+    <% end %>
+  </ol>
+</div>
